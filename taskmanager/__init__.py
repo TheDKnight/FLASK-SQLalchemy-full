@@ -1,8 +1,9 @@
 import os
 
+
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from taskmanager import routes
+
 
 if os.path.exists("env.py"):
     import env 
@@ -19,3 +20,5 @@ if uri.startswith("postgres://"):
 
 db = SQLAlchemy(app)
 
+
+from taskmanager import routes
